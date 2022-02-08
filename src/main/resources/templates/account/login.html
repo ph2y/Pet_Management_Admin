@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="card cell small-6 custom-daemon-login">
+    <div class="card-divider">
+        System Login
+    </div>
+    <div class="card-section">
+        <div class="title-bar">
+            <div class="title-bar-left">
+                <span class="title-bar-title">집사의노트 점주 포털</span>
+            </div>
+            <div class="title-bar-right">
+                <button class="hollow button tiny" style="margin: 0" onclick="location.href = location.origin + '/login'">
+                    로그인
+                </button>
+                <button class="hollow button tiny" style="margin: 0" onclick="location.href = location.origin + '/register'">
+                    회원가입
+                </button>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="grid-x align-center">
+                <form id="login-form" method="post" action="/login/process">
+                    <div>
+                        <label>Username
+                            <input id="username" name="username" type="text" placeholder="Username" required autofocus>
+                        </label>
+                    </div>
+                    <div>
+                        <label>Password
+                            <input id="password" name="password" type="password" placeholder="Password" required>
+                        </label>
+                    </div>
+                    <div>
+                        <button class="button expanded custom-daemon-login-btn" type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
