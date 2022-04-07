@@ -49,15 +49,15 @@ out/
 /src/main/webapp/**/coverage
 
 # production
+/src/main/webapp/**/dist
 /src/main/webapp/**/build
 
 # misc
 /src/main/webapp/**/.DS_Store
 /src/main/webapp/**/.env.local
-/src/main/webapp/**/.env.development.local
-/src/main/webapp/**/.env.test.local
-/src/main/webapp/**/.env.production.local
+/src/main/webapp/**/.env.*.local
 
 /src/main/webapp/**/npm-debug.log*
+/src/main/webapp/**/pnpm-debug.log*
 /src/main/webapp/**/yarn-debug.log*
 /src/main/webapp/**/yarn-error.log*
