@@ -1,6 +1,6 @@
 import {Button, Card, Form} from "react-bootstrap";
-import {HeaderFragment} from "components/common/header/header";
-import "css/main/login.css";
+import {HeaderFragment} from "@/components/common/header/legacy_header";
+import "src/main/webapp/reactjs/src/css/main/login.css";
 
 export function LoginView() {
     return(
