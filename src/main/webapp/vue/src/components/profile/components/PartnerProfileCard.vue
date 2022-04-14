@@ -11,7 +11,7 @@
         </b-form-group>
         <b-form-group class="col">
           <label for="partner_phone"></label>
-          <b-form-input id="partner_phone" type="text" placeholder="점주 또는 매니저의 전화번호를 입력하세요" />
+          <b-form-input id="partner_phone" type="text" placeholder="점주 또는 매니저의 휴대전화번호를 입력하세요" />
           <b-form-text>
             [집사의노트] 서비스 제공을 위해 수집되며, 일반 고객에게 공개되지 않습니다<br/>
             공개 연락처는 "점포정보" 화면의 전화번호 란에 입력해주세요<br/>

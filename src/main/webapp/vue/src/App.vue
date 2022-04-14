@@ -1,15 +1,10 @@
 <template>
-  <ProfileView/>
+  <router-view></router-view>
 </template>
 
 <script>
-import ProfileView from "@/components/profile/ProfileView";
-
 export default {
-  name: 'App',
-  components: {
-    ProfileView
-  }
+  name: 'App'
 }
 </script>
 

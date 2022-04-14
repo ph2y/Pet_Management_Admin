@@ -60,6 +60,7 @@ export default {
         name: "",
         type: "",
         address: "",
+        phone: "",
         description: "",
         operationDay: [],
         operationHour: ""

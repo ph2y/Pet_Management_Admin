@@ -10,8 +10,8 @@
 
 <script>
 import HeaderFragment from "@/components/common/header/HeaderFragment";
-import ShopProfileCard from "@/components/profile/ShopProfileCard";
-import PartnerProfileCard from "@/components/profile/PartnerProfileCard";
+import ShopProfileCard from "@/components/profile/components/ShopProfileCard";
+import PartnerProfileCard from "@/components/profile/components/PartnerProfileCard";
 export default {
   name: "ProfileView",
   components: {HeaderFragment, PartnerProfileCard, ShopProfileCard}
