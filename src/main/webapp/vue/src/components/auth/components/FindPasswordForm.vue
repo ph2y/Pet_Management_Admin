@@ -37,7 +37,7 @@
         파트너스 PW 재설정
       </b-button>
       <div class="find_link d-flex justify-content-end">
-        <a :href="'/auth'">
+        <a :href="'/auth/login'">
           로그인
         </a>
         <a :href="'/auth/register'">

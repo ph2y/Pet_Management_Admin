@@ -1,21 +1,32 @@
-import { createWebHistory, createRouter } from "vue-router";
-import LoginView from "@/components/intro/LoginView";
-import RegisterView from "@/components/intro/RegisterView";
-import FindView from "@/components/intro/FindView";
-import ProfileView from "@/components/profile/ProfileView";
+import VueRouter from "vue-router";
 import IntroView from "@/components/intro/IntroView";
+import IntroDevView from "@/components/intro/IntroDevView";
+import IntroPartnersView from "@/components/intro/IntroPartnersView";
+import LoginView from "@/components/auth/LoginView";
+import RegisterView from "@/components/auth/RegisterView";
+import FindView from "@/components/auth/FindView";
+import ProfileView from "@/components/profile/ProfileView";
+import ReviewView from "@/components/review/ReviewView";
 
 const routes = [
     {path: "/", component: IntroView},
-    {path: "/auth", component: LoginView},
+    {path: "/partners", component: IntroPartnersView},
+    {path: "/development", component: IntroDevView},
+    {path: "/auth", redirect: "/auth/login"},
+    {path: "/auth/login", component: LoginView},
     {path: "/auth/register", component: RegisterView},
     {path: "/auth/find", component: FindView},
-    {path: "/login", component: LoginView},
-    {path: "/profile", component: ProfileView}
+    {path: "/manage", redirect: "/manage/profile"},
+    {path: "/manage/profile", component: ProfileView},
+    {path: "/manage/review", component: ReviewView},
+    {path: "/manage/product", redirect: "/manage/profile"},
+    {path: "/manage/service", redirect: "/manage/profile"},
+    {path: "/manage/reservation", redirect: "/manage/profile"},
+    {path: "/manage/receipt", redirect: "/manage/profile"}
 ];
 
-const router = createRouter({
-    history: createWebHistory(),
+const router = new VueRouter({
+    mode: "history",
     routes,
 });
 

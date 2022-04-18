@@ -1,14 +1,17 @@
-import {createApp} from "vue";
-import BootstrapVue3 from "bootstrap-vue-3";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-vue-3/dist/bootstrap-vue-3.css";
-
-import router from "./router/index";
+import Vue from "vue";
 import App from "./App.vue";
 
-const vueApp = createApp(App);
+import { BootstrapVue } from "bootstrap-vue";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
 
-vueApp.use(router);
-vueApp.use(BootstrapVue3);
+import VueRouter from "vue-router";
+import router from "./router/index";
 
-vueApp.mount("#app");
+Vue.use(VueRouter);
+Vue.use(BootstrapVue);
+
+new Vue({
+    router,
+    render: h => h(App),
+}).$mount("#app");

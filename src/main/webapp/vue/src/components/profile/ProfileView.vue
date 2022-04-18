@@ -1,20 +1,31 @@
 <template>
   <div class="profile_main">
-    <HeaderFragment/>
+    <MainHeader/>
     <div class="profile_body">
-      <ShopProfileCard/>
-      <PartnerProfileCard/>
+      <b-card no-body class="profile_card">
+        <b-tabs card>
+          <b-tab title="매니저(점주) 정보">
+            <PartnerProfileForm/>
+          </b-tab>
+          <b-tab title="점포 정보">
+            <ShopProfileForm/>
+          </b-tab>
+        </b-tabs>
+      </b-card>
     </div>
+    <MainFooter/>
   </div>
 </template>
 
 <script>
-import HeaderFragment from "@/components/common/header/HeaderFragment";
-import ShopProfileCard from "@/components/profile/components/ShopProfileCard";
-import PartnerProfileCard from "@/components/profile/components/PartnerProfileCard";
+import MainHeader from "@/components/common/header/MainHeader";
+import ShopProfileForm from "@/components/profile/components/ShopProfileForm";
+import PartnerProfileForm from "@/components/profile/components/PartnerProfileForm";
+import MainFooter from "@/components/common/footer/MainFooter";
+
 export default {
   name: "ProfileView",
-  components: {HeaderFragment, PartnerProfileCard, ShopProfileCard}
+  components: {MainFooter, MainHeader, PartnerProfileForm, ShopProfileForm}
 }
 </script>
 
@@ -23,12 +34,13 @@ export default {
   padding: 30px;
 }
 
-.profile_body >>> .place_profile_card {
-  max-width: 1000px;
-  margin: 20px auto;
+.profile_body >>> .profile_button {
+  margin-bottom: 20px;
 }
 
-.profile_body >>> .place_profile_form {
-  text-align: left;
+.profile_card {
+  max-width: 1000px;
+  margin: 20px auto;
+  word-break: keep-all;
 }
 </style>

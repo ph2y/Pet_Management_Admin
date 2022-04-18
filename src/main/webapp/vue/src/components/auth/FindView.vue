@@ -1,18 +1,14 @@
 <template>
   <div class="find_main">
-    <HeaderFragment></HeaderFragment>
+    <IntroHeader></IntroHeader>
     <div class="find_body">
       <b-card no-body class="find_card">
         <b-tabs card>
           <b-tab title="파트너스 ID 찾기" active>
-            <b-card-body>
-              <FindUsernameForm></FindUsernameForm>
-            </b-card-body>
+            <FindUsernameForm></FindUsernameForm>
           </b-tab>
           <b-tab title="파트너스 PW 찾기">
-            <b-card-body>
-              <FindPasswordForm></FindPasswordForm>
-            </b-card-body>
+            <FindPasswordForm></FindPasswordForm>
           </b-tab>
         </b-tabs>
       </b-card>
@@ -21,13 +17,13 @@
 </template>
 
 <script>
-import HeaderFragment from "@/components/common/header/HeaderFragment";
-import FindUsernameForm from "@/components/intro/components/FindUsernameForm";
-import FindPasswordForm from "@/components/intro/components/FindPasswordForm";
+import IntroHeader from "@/components/common/header/IntroHeader";
+import FindUsernameForm from "@/components/auth/components/FindUsernameForm";
+import FindPasswordForm from "@/components/auth/components/FindPasswordForm";
 
 export default {
   name: "FindView",
-  components: {FindPasswordForm, FindUsernameForm, HeaderFragment},
+  components: {FindPasswordForm, FindUsernameForm, IntroHeader},
   data() {
     return {
       selectedTab: "find_username"
@@ -45,6 +41,7 @@ export default {
 .find_body >>> .find_card {
   max-width: 500px;
   margin: 20px auto;
+  text-align: center;
 }
 
 .find_body >>> .find_form_control {
@@ -52,18 +49,17 @@ export default {
 }
 
 .find_body >>> .find_form .find_button {
-  min-width: 100px;
-  max-width: 200px;
+  width: 200px;
   margin: 0 auto;
 }
 
 .find_body >>> .find_form .verify_button {
-  min-width: 100px;
-  max-width: 200px;
+  width: 200px;
   margin: 0 auto 50px;
 }
 
 .find_body >>> .find_form .find_link a {
+  margin-top: 25px;
   margin-left: 10px;
 }
 </style>

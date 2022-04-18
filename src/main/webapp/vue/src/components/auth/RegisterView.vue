@@ -1,10 +1,10 @@
 <template>
   <div class="register_main">
-    <HeaderFragment></HeaderFragment>
+    <IntroHeader></IntroHeader>
     <div class="register_body">
       <b-card class="register_card">
         <b-card-body>
-          <b-card-title>파트너스 입점신청</b-card-title>
+          <b-card-title class="register_card_title">파트너스 입점신청</b-card-title>
           <b-form class="register_form">
             <div class="row mb-3">
               <b-form-group class="col">
@@ -104,7 +104,7 @@
               회원가입 및 입점신청을 하시면 집사의노트 개발팀(Ph2y Dev)에서 검토 후 결과를 이메일과 전화번호로 통지해 드립니다<br/>
               회원가입 및 입점 승인 이후 관리자 페이지 로그인을 통해 서비스 사용이 가능합니다
             </b-alert>
-            <b-button class="float-end" variant="primary" type="submit">
+            <b-button class="float-right" variant="primary" type="submit">
               회원가입 및 입점신청
             </b-button>
           </b-form>
@@ -115,12 +115,11 @@
 </template>
 
 <script>
-import HeaderFragment from "@/components/common/header/HeaderFragment";
-import {ref} from "vue";
+import IntroHeader from "@/components/common/header/IntroHeader";
 
 export default {
   name: "RegisterView",
-  components: {HeaderFragment},
+  components: {IntroHeader},
   data() {
     return {
       partnerProfile: {
@@ -146,7 +145,7 @@ export default {
         { value: 1, text: "펫샵" },
         { value: 2, text: "애견호텔" },
       ],
-      selectedPlaceOperationDay: ref([]),
+      selectedPlaceOperationDay: [],
       placeOperationDay: ["월", "화", "수", "목", "금", "토", "일", "법정공휴일"]
     }
   },
@@ -162,6 +161,9 @@ export default {
 .register_body >>> .register_card {
   max-width: 1000px;
   margin: 20px auto;
+}
+.register_body >>> .register_card_title {
+  text-align: center;
 }
 
 .register_body >>> .register_form {
