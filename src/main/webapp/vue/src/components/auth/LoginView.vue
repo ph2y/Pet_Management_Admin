@@ -23,26 +23,33 @@
         </b-form>
       </b-card>
     </div>
+    <MainFooter/>
   </div>
 </template>
 
 <script>
 import IntroHeader from "@/components/common/header/IntroHeader";
+import MainFooter from "@/components/common/footer/MainFooter";
 export default {
   name: "LoginView",
-  components: {IntroHeader},
+  components: {MainFooter, IntroHeader},
   methods: {
     reqLogin() {
-      this.$router.push("/manage/profile");
+      this.$router.push("/manage/review");
     }
   }
 }
 </script>
 
 <style scoped>
+.login_body {
+  min-height: calc(100vh - 110px);
+  padding: 20px;
+}
+
 .login_body >>> .login_card {
   max-width: 500px;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 .login_body >>> .login_card {

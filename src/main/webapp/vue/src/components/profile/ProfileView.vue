@@ -32,6 +32,7 @@ export default {
 <style scoped>
 .profile_body {
   padding: 30px;
+  min-height: calc(100vh - 110px);
 }
 
 .profile_body >>> .profile_button {

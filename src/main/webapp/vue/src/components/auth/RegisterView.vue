@@ -111,15 +111,17 @@
         </b-card-body>
       </b-card>
     </div>
+    <MainFooter/>
   </div>
 </template>
 
 <script>
 import IntroHeader from "@/components/common/header/IntroHeader";
+import MainFooter from "@/components/common/footer/MainFooter";
 
 export default {
   name: "RegisterView",
-  components: {IntroHeader},
+  components: {MainFooter, IntroHeader},
   data() {
     return {
       partnerProfile: {
@@ -158,6 +160,9 @@ export default {
 </script>
 
 <style scoped>
+.register_body {
+  min-height: calc(100vh - 110px);
+}
 .register_body >>> .register_card {
   max-width: 1000px;
   margin: 20px auto;

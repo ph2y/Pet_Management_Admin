@@ -16,7 +16,7 @@ const routes = [
     {path: "/auth/login", component: LoginView},
     {path: "/auth/register", component: RegisterView},
     {path: "/auth/find", component: FindView},
-    {path: "/manage", redirect: "/manage/profile"},
+    {path: "/manage", redirect: "/manage/review"},
     {path: "/manage/profile", component: ProfileView},
     {path: "/manage/review", component: ReviewView},
     {path: "/manage/product", redirect: "/manage/profile"},

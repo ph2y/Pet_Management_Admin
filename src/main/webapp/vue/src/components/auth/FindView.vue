@@ -13,6 +13,7 @@
         </b-tabs>
       </b-card>
     </div>
+    <MainFooter/>
   </div>
 </template>
 
@@ -20,10 +21,11 @@
 import IntroHeader from "@/components/common/header/IntroHeader";
 import FindUsernameForm from "@/components/auth/components/FindUsernameForm";
 import FindPasswordForm from "@/components/auth/components/FindPasswordForm";
+import MainFooter from "@/components/common/footer/MainFooter";
 
 export default {
   name: "FindView",
-  components: {FindPasswordForm, FindUsernameForm, IntroHeader},
+  components: {MainFooter, FindPasswordForm, FindUsernameForm, IntroHeader},
   data() {
     return {
       selectedTab: "find_username"
@@ -38,9 +40,14 @@ export default {
 </script>
 
 <style scoped>
+.find_body {
+  min-height: calc(100vh - 110px);
+  padding: 20px;
+}
+
 .find_body >>> .find_card {
   max-width: 500px;
-  margin: 20px auto;
+  margin: 0 auto;
   text-align: center;
 }
 
